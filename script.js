@@ -6,7 +6,7 @@ let todos = [];
 
 addButton.addEventListener('click',addTodo);
 
-// 투두 추가 함수
+//투두 추가함수
 function addTodo() {
   const todoText = todoInput.value.trim();
   
@@ -20,7 +20,7 @@ function addTodo() {
 
 }
  
-  
+  // 투두리스트생성함수
   function createTodoItem(todoText) {
     const todoItem = document.createElement('li');
     todoItem.textContent = todoText;
@@ -34,18 +34,18 @@ function addTodo() {
   todoItem.appendChild(removeButton);
   return todoItem;
 }
-
+  //투두 완료
   function completeTodo(event) {
     const todoItem = event.target.closest('li');
     todoItem.classList.toggle('completed');
   }
-
+  //투두 지울때
   function removeTodo(event) {
     const todoItem = event.target.closest('li');
     todoItem.parentNode.removeChild(todoItem);
     }
 
-    
+    //로컬 저장소, JSON
     function saveTodo(todos) {
       localStorage.setItem('todos', JSON.stringify(todos));
     }

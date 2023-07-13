@@ -1,4 +1,13 @@
+
+
 .completed {
   text-decoration: line-through;
   color: darkgrey;
+}
+
+h1 {
+  color: white;
+  text-decoration: underline;
+  background-color: skyblue;
+  text-shadow: -1px -1px 1px #aaa;
 }

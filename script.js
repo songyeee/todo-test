@@ -45,7 +45,7 @@ function addTodo() {
     todoItem.parentNode.removeChild(todoItem);
     }
 
-    //로컬 저장소, JSON
+    //로컬 저장소
     function saveTodo(todos) {
       localStorage.setItem('todos', JSON.stringify(todos));
     }

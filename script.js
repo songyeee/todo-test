@@ -17,21 +17,24 @@ function addTodo() {
     saveTodo(todos);
     todoInput.value = '';
   }
+
+}
  
-  // 할일완료
+  
   function createTodoItem(todoText) {
     const todoItem = document.createElement('li');
     todoItem.textContent = todoText;
     todoItem.addEventListener('click', completeTodo);
-  }
+  
 
   // 삭제 버튼 
   const removeButton = document.createElement("button");
   removeButton.textContent = '✂';
-  todoItem.appendChild(todoItem);
   removeButton.addEventListener('click', removeTodo);
+  todoItem.appendChild(removeButton);
   return todoItem;
 }
+
   function completeTodo(event) {
     const todoItem = event.target.closest('li');
     todoItem.classList.toggle('completed');
@@ -56,7 +59,7 @@ function addTodo() {
         const todoItem = createTodoItem(todos[i]);
         todoList.appendChild(todoItem);
       }
-    
     }
+    
     window.addEventListener('load', loadTodo);
 
